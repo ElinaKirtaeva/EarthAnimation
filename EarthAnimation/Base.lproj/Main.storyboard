@@ -1,24 +1,80 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EarthAnimation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="3da-Va-rFz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="_sun" translatesAutoresizingMaskIntoConstraints="NO" id="uEh-3z-OQ6">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="iR7-Bm-7ae"/>
+                                    <constraint firstAttribute="height" constant="300" id="m3B-X1-WfN"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnw-HI-IKh">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OMy-Gu-pWa">
+                                        <rect key="frame" x="0.0" y="250" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="Reg-hO-Fkl"/>
+                                            <constraint firstAttribute="height" constant="50" id="z8I-yg-DbR"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="KGo-uQ-dez"/>
+                                    <constraint firstAttribute="width" constant="300" id="R9S-NS-SDi"/>
+                                    <constraint firstItem="OMy-Gu-pWa" firstAttribute="leading" secondItem="lnw-HI-IKh" secondAttribute="leading" id="eTB-M7-zvt"/>
+                                    <constraint firstAttribute="bottom" secondItem="OMy-Gu-pWa" secondAttribute="bottom" id="p4b-WL-Fhk"/>
+                                    <constraint firstItem="OMy-Gu-pWa" firstAttribute="top" secondItem="lnw-HI-IKh" secondAttribute="top" constant="250" id="shU-8X-fli"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="uEh-3z-OQ6" firstAttribute="centerY" secondItem="3da-Va-rFz" secondAttribute="centerY" id="6Vb-YT-BkC"/>
+                            <constraint firstAttribute="bottom" secondItem="3da-Va-rFz" secondAttribute="bottom" id="FeX-6q-ABk"/>
+                            <constraint firstItem="uEh-3z-OQ6" firstAttribute="centerX" secondItem="3da-Va-rFz" secondAttribute="centerX" id="Kio-82-IvZ"/>
+                            <constraint firstItem="3da-Va-rFz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ls0-oQ-Egq"/>
+                            <constraint firstItem="3da-Va-rFz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="awu-W1-gEd"/>
+                            <constraint firstItem="lnw-HI-IKh" firstAttribute="centerX" secondItem="3da-Va-rFz" secondAttribute="centerX" id="e09-YW-N5R"/>
+                            <constraint firstItem="3da-Va-rFz" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="fvO-Fi-bTw"/>
+                            <constraint firstItem="lnw-HI-IKh" firstAttribute="centerY" secondItem="3da-Va-rFz" secondAttribute="centerY" id="l5s-J0-nKI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="earth" destination="OMy-Gu-pWa" id="WyI-K1-Ffz"/>
+                        <outlet property="earthView" destination="lnw-HI-IKh" id="5PG-IL-wW3"/>
+                        <outlet property="sun" destination="uEh-3z-OQ6" id="d8k-iJ-7e6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="79.6875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="_sun" width="320" height="320"/>
+        <image name="background" width="1350" height="2400"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
